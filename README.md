@@ -1,0 +1,3 @@
+## Veresiye - a very simple accounting app for tracking payments
+---
+Under construction...
