@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+const userRoutes = require('./routes/userRoutes');
+const accountRoutes = require('./routes/accountRoutes');
+
 //Connecting to DB
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -23,6 +26,9 @@ app.use((req, res, next) => {
 });
 
 //Setting the routes
+
+app.use('/api/user', userRoutes);
+//app.use('/api/account', accountRoutes);
 
 app.get('/api', (req, res) => {
     res.json({ "message": "API is working" })
