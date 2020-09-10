@@ -21,16 +21,15 @@ router.get('/:id', verify, async (req, res) => {
 });
 
 //Adding a transaction to a user
-router.patch('/:id/add', verify, async (req, res) => {
+router.patch('/:id', verify, async (req, res) => {
     let userId = jwt.decode(req.header('auth-token'))._id;
-    let account;
     let transaction = req.body.transaction;
     try {
-        account = await Account.findOneAndUpdate({ _id: req.params.id, associatedUser: userId });
+        account = await Account.findByIdAndUpdate(req.params.id);
         if (account == null) {
             return res.status(400).json({ message: 'Cannot find the account' });
         }
-        const newTransaction = account.transactions.push(transaction);
+        account.transactions.push(transaction);
         await account.save();
         res.json({ message: "transaction saved" });
     }

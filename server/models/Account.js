@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('useFindAndModify', false);
 
 /* 
     The structure I want to implement:
@@ -43,6 +44,9 @@ const entrySchema = new mongoose.Schema({
 });
 
 const transactionSchema = new mongoose.Schema({
+    transactionType: {
+        type: String
+    },
     entries: [entrySchema]
 });
 
