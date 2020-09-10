@@ -9,7 +9,7 @@ router.get('/:id', verify, async (req, res) => {
     let userId = jwt.decode(req.header('auth-token'))._id;
     let account;
     try {
-        account = await Account.find({ _id: req.params.id, associatedUser: userId  })
+        account = await Account.find({ _id: req.params.id, associatedUser: userId });
         if (account == null) {
             return res.status(400).json({ message: 'Cannot find the account' });
         }
@@ -20,11 +20,30 @@ router.get('/:id', verify, async (req, res) => {
     res.json(account);
 });
 
+//Adding a transaction to a user
+router.patch('/:id/add', verify, async (req, res) => {
+    let userId = jwt.decode(req.header('auth-token'))._id;
+    let account;
+    let transaction = req.body.transaction;
+    try {
+        account = await Account.findOneAndUpdate({ _id: req.params.id, associatedUser: userId });
+        if (account == null) {
+            return res.status(400).json({ message: 'Cannot find the account' });
+        }
+        const newTransaction = account.transactions.push(transaction);
+        await account.save();
+        res.json({ message: "transaction saved" });
+    }
+    catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+});
+
 //Getting all accounts
 router.get('/', verify, async (req, res) => {
     let userId = jwt.decode(req.header('auth-token'))._id;
     try {
-        const accounts = await Account.find({ associatedUser: userId});
+        const accounts = await Account.find({ associatedUser: userId });
         res.json(accounts);
     }
     catch (err) {
@@ -42,7 +61,7 @@ router.post('/', verify, async (req, res) => {
     try {
         const newAccount = await account.save();
         res.status(201).json({ message: newAccount._id });
-    } 
+    }
     catch (err) {
         res.status(400).json({ message: err.message });
     }
