@@ -51,6 +51,13 @@ router.post('/login', async (req, res) => {
     //Giving the token and logging in
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
     res.header('auth-token', token);
+    
+    let cookieOptions = {
+        maxAge: 1000 * 60 * 60,
+        httpOnly: true
+    }
+
+    res.cookie('auth-token', token, cookieOptions);
 
     res.send('Logged in!');
 });
