@@ -1,0 +1,98 @@
+.Login {
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-image: url(./img/logo-background.png);
+    background-repeat: no-repeat;
+
+    width: 248px;
+    height: 128px;
+    margin-bottom: 50px;
+}
+
+.Login-logo-text {
+    font-weight: bold;
+    font-size: 48px;
+    padding-left: 50px;
+}
+
+.Login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Login-form-input {
+    width: 400px;
+    height: 50px;
+    border: 2px solid #b4b4b4;
+    border-radius: 50px;
+    outline: none;
+
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+
+    margin-bottom: 25px;
+
+    transition: ease .2s;
+}
+
+.Login-form-input:focus {
+    border-color: #FFD77A;
+}
+
+input[type=email] {
+    padding-left: 25px;
+    color: #353535;
+}
+
+input[type=password] {
+    padding-left: 25px;
+    color: #353535;
+}
+
+.Login-form-input::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.Login-form-button {
+    width: 400px;
+    height: 50px;
+
+    background: #FFEAB9;
+    border: 3px solid #FFD77A;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+    margin-bottom: 25px;
+
+    transition: ease .2s;
+}
+
+.Login-form-button:hover {
+    background-color: #FFD77A;
+}
+
+.Login-register {
+    color: #353535;
+    font-weight: 700;
+    transition: ease .2s;
+}
+
+.Login-register:hover {
+    color: #ffca4f;
+}
