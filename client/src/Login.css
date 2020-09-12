@@ -52,12 +52,12 @@
     border-color: #FFD77A;
 }
 
-input[type=email] {
+.Login-form > input[type=email] {
     padding-left: 25px;
     color: #353535;
 }
 
-input[type=password] {
+.Login-form > input[type=password] {
     padding-left: 25px;
     color: #353535;
 }

@@ -1,0 +1,148 @@
+.Home {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Home-header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background-image: url(./img/logo-background.png);
+    background-repeat: no-repeat;
+
+    width: 248px;
+    height: 128px;
+    margin: 50px;
+}
+
+.Home-header-logo-text {
+    font-weight: bold;
+    font-size: 48px;
+    padding-left: 50px;
+}
+
+.Home-header-logout {
+  width: 144px;
+  height: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Home-header-logout-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.Home-header-logout-logo {
+  background-image: url(./img/power.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.Home-search {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid #353535;
+}
+
+.Home-search-input {
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 48px;
+  width: calc(100% - 85px);
+}
+
+.Home-search > input[type=text] {
+  padding-left: 25px;
+  color: #353535;
+}
+
+.Home-search-button {
+  background-color: white;
+  border: none;
+  background-image: url(./img/search.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+.Home-accounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.Home-accounts-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  border: 2px solid #353535;
+  border-radius: 100px;
+
+  height: 100px;
+  padding: 25px;
+}
+
+.Home-accounts-add-img {
+  background-image: url(./img/user.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.Home-accounts-add-input {
+  width: calc(100% - 300px);
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.Home-accounts-add-button {
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #FFEAB9;
+  border: 2px solid #FFD77A;
+  border-radius: 50px;
+  transition: ease .2s;
+}
+
+.Home-accounts-add-button:hover {
+  background-color: #FFD77A;
+}

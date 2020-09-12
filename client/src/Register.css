@@ -52,17 +52,17 @@
     border-color: #FFD77A;
 }
 
-input[type=text] {
+.Register-form > input[type=text] {
     padding-left: 25px;
     color: #353535;
 }
 
-input[type=email] {
+.Register-form > input[type=email] {
     padding-left: 25px;
     color: #353535;
 }
 
-input[type=password] {
+.Register-form > input[type=password] {
     padding-left: 25px;
     color: #353535;
 }
