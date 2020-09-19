@@ -11,6 +11,8 @@ import {
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
+import Details from './Details';
+import Add from './Add';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,6 +36,18 @@ class App extends React.Component {
             </Route>
             <Route path='/register'>
               <Register />
+            </Route>
+            <Route path='/details'>
+              <Details />
+            </Route>
+            <Route path='/add'>
+              <Add />
+            </Route>
+            <Route path='/:id/add'>
+              <Add />
+            </Route>
+            <Route path='/:id'>
+              <Details />
             </Route>
           </Switch>
         </Router>

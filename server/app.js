@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const app = express();
 
@@ -20,13 +21,15 @@ db.once('open', () => console.log('Connected to DB! yeeyy'))
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 
-app.use((req, res, next) => {
-    res.append('Access-Control-Allow-Origin', ['*']);
-    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.append('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-});
+// app.use((req, res, next) => {
+//     res.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+//     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//     res.append('Access-Control-Allow-Headers', 'Content-Type');
+//     res.append('Access-Control-Allow-Credentials', 'true')
+//     next();
+// });
 
 //Setting the routes
 

@@ -25,21 +25,22 @@
 
     width: 248px;
     height: 128px;
-    margin: 50px;
+    margin: 50px 50px 50px 0px;
 }
 
 .Home-header-logo-text {
     font-weight: bold;
     font-size: 48px;
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 .Home-header-logout {
   width: 144px;
   height: 30px;
   margin-left: 50px;
-  margin-right: 50px;
   color: #353535;
+  background-color: white;
+  border: none;
 
   display: flex;
   flex-direction: row;
@@ -61,8 +62,6 @@
 }
 
 .Home-search {
-  margin-left: 50px;
-  margin-right: 50px;
   margin-bottom: 50px;
   height: 50px;
 
@@ -101,8 +100,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .Home-accounts-add {

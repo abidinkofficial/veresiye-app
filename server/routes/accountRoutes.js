@@ -6,7 +6,7 @@ const { deleteOne } = require('../models/Account');
 
 //Getting one account
 router.get('/:id', verify, async (req, res) => {
-    let userId = jwt.decode(req.header('auth-token'))._id;
+    let userId = jwt.decode(req.cookies['auth-token'])._id;
     let account;
     try {
         account = await Account.find({ _id: req.params.id, associatedUser: userId });
@@ -22,7 +22,7 @@ router.get('/:id', verify, async (req, res) => {
 
 //Adding a transaction to a user
 router.patch('/:id', verify, async (req, res) => {
-    let userId = jwt.decode(req.header('auth-token'))._id;
+    let userId = jwt.decode(req.cookies['auth-token'])._id;
     let transaction = req.body.transaction;
     try {
         account = await Account.findByIdAndUpdate(req.params.id);
@@ -40,7 +40,7 @@ router.patch('/:id', verify, async (req, res) => {
 
 //Getting all accounts
 router.get('/', verify, async (req, res) => {
-    let userId = jwt.decode(req.header('auth-token'))._id;
+    let userId = jwt.decode(req.cookies['auth-token'])._id;
     try {
         const accounts = await Account.find({ associatedUser: userId });
         res.json(accounts);
@@ -52,7 +52,7 @@ router.get('/', verify, async (req, res) => {
 
 //Creating an account
 router.post('/', verify, async (req, res) => {
-    let userId = jwt.decode(req.header('auth-token'))._id;
+    let userId = jwt.decode(req.cookies['auth-token'])._id;
     const account = new Account({
         name: req.body.name,
         associatedUser: userId,

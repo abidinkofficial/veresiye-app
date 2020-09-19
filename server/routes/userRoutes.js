@@ -53,13 +53,15 @@ router.post('/login', async (req, res) => {
     res.header('auth-token', token);
     
     let cookieOptions = {
-        maxAge: 1000 * 60 * 60,
-        httpOnly: true
+        maxAge: 1000 * 60 * 60
     }
 
     res.cookie('auth-token', token, cookieOptions);
 
-    res.send('Logged in!');
+    res.json({
+      'message': 'logged in',
+      'auth-token': token
+    });
 });
 
 module.exports = router;

@@ -1,0 +1,234 @@
+.Details {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Details-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Details-header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url(./img/logo-background.png);
+  background-repeat: no-repeat;
+
+  /* width: calc(100% - 300px); */
+  height: 128px;
+  margin: 50px 50px 50px 0px;
+}
+
+.Details-header-logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 50px;
+}
+
+.Details-header-logo-link:hover {
+  text-decoration: underline;
+}
+
+.Details-header-logo-link-icon {
+  display: block;
+  background-image: url(./img/arrowleft.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  padding-right: 25px;
+}
+
+.Details-header-logo-text {
+  font-weight: bold;
+  font-size: 36px;
+  margin-left: 50px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.Details-header-logout {
+  width: 144px;
+  height: 30px;
+  margin-left: 50px;
+  color: #353535;
+  background-color: white;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Details-header-logout-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #353535;
+}
+
+.Details-header-logout-logo {
+  background-image: url(./img/power.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.Details-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.Details-banner-balance {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.Details-banner-balance-amount {
+  color: #FF6060;
+}
+
+.Details-banner-buttons-addTransactionButton {
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #FFEAB9;
+  border: 2px solid #FFD77A;
+  border-radius: 50px;
+  transition: ease .2s;
+  margin-right: 10px;
+}
+
+.Details-banner-buttons-addTransactionButton:hover {
+  background-color: #FFD77A;
+}
+
+.Details-banner-buttons-closeAccountButton {
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #FFA4A4;
+  border: 2px solid #FF6060;
+  border-radius: 50px;
+  transition: ease .2s;
+}
+
+.Details-banner-buttons-closeAccountButton:hover {
+  background-color: #FF6060;
+}
+
+.Transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 25px;
+
+  border: 2px solid #353535;
+  border-radius: 50px;
+}
+
+.Transaction-header {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.Transaction-entries {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.Transaction-entries-entry {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 18px;
+  border-bottom: 2px solid #353535;
+  height: 24px;
+  line-height: 24px;
+}
+
+.Transaction-entries-entry-amount {
+  width: 8%;
+}
+
+.Transaction-entries-entry-name {
+  width: 84%;
+}
+
+.Transaction-entries-entry-price {
+  width: 18%;
+  text-align: end;
+}
+
+.Transaction-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 50px 50px 50px;
+
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.Transaction-summary-amount, .Transaction-summary-previousDebt, .Transaction-summary-newDebt {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.Transaction-summary-amount-text, .Transaction-summary-previousDebt-text, .Transaction-summary-newDebt-text {
+  width: calc(85% - 10px);
+  margin-right: 10px;
+  text-align: end;
+}
+
+.Transaction-summary-amount-number, .Transaction-summary-previousDebt-number, .Transaction-summary-newDebt-number {
+  width: 15%;
+  text-align: end;
+}
+
+.negative {
+  color: #FF6060;
+}

@@ -1,0 +1,283 @@
+.Add {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Add-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Add-header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url(./img/logo-background.png);
+  background-repeat: no-repeat;
+
+  /* width: calc(100% - 300px); */
+  height: 128px;
+  margin: 50px 50px 50px 0px;
+}
+
+.Add-header-logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 50px;
+}
+
+.Add-header-logo-link:hover {
+  text-decoration: underline;
+}
+
+.Add-header-logo-link-icon {
+  display: block;
+  background-image: url(./img/arrowleft.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  padding-right: 25px;
+}
+
+.Add-header-logo-text {
+  font-weight: bold;
+  font-size: 36px;
+  margin-left: 50px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.Add-header-logout {
+  width: 144px;
+  height: 30px;
+  margin-left: 50px;
+  color: #353535;
+  background-color: white;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Add-header-logout-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #353535;
+}
+
+.Add-header-logout-logo {
+  background-image: url(./img/power.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.Add-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Add-form-type {
+  margin-bottom: 50px;
+  width: 200px;
+  height: 35px;
+  margin-right: auto;
+  border: 2px solid #353535;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Add-form-type-option {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Add-form-entries {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Add-form-entries-entry {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Add-form-entries-entry-amount {
+  width: 150px;
+  height: 50px;
+  border: 2px solid #353535;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Add-form-entries-entry-amount-input {
+  width: 70%;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Add-form-entries-entry-name {
+  width: calc(100% - 495px);
+  height: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 2px solid #353535;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Add-form-entries-entry-name-input {
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.Add-form-entries-entry-price {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid #353535;
+  border-radius: 50px;
+}
+
+.Add-form-entries-entry-price-input {
+  width: 70%;
+  border: none;
+  text-align: end;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Add-form-entries-entry-price span {
+  margin-right: 25px;
+}
+
+.Add-form-entries-entry-save {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #353535;
+  border-radius: 100%;
+  margin-left: 15px;
+}
+
+.Add-form-summary {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.Add-form-summary-total, .Add-form-summary-previous, .Add-form-summary-new {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.Add-form-summary-total-text, .Add-form-summary-previous-text, .Add-form-summary-new-text {
+  width: 250px;
+}
+
+.Add-form-summary-total-number, .Add-form-summary-new-number {
+  color: #FF6060;
+}
+
+.Add-form-submit {
+  margin-right: auto;
+  width: 400px;
+  height: 50px;
+  border: 3px solid #FFD77A;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #FFEAB9;
+  transition: ease .2s;
+  margin-bottom: 50px;
+}
+
+.Add-form-submit:hover {
+  background-color: #FFD77A;
+}
+
+.Add-form-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Add-form-display-entry {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 2px dashed #999999;
+  border-radius: 50px;
+  color: #353535;
+  height: 50px;
+}
+
+.Add-form-display-entry-amount {
+  width: 150px;
+  margin-left: 15px;
+}
+
+.Add-form-display-entry-name {
+  width: calc(100% - 400px);
+}
+
+.Add-form-display-entry-price {
+  width: 250px;
+  text-align: end;
+  margin-right: 15px;
+}
